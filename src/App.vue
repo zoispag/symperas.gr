@@ -1,28 +1,43 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="antialiased">
+    <Nav />
+    
+    <Intro />
+    
+    <Rotator />
+
+    <Advices />
+
+    <DictionaryForm />
+
+    <Footer />
+    <Credits />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Nav from './components/Nav.vue'
+import Intro from './components/Intro.vue'
+import Rotator from './components/Rotator.vue'
+import Advices from './components/Advices.vue'
+import DictionaryForm from './components/DictionaryForm.vue'
+import Footer from './components/Footer.vue'
+import Credits from './components/Credits.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Nav,
+    Intro,
+    Rotator,
+    Advices,
+    DictionaryForm,
+    Footer,
+    Credits
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
