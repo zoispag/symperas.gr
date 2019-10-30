@@ -1,19 +1,19 @@
 <template>
   <div>
     <div class="flex flex-grow justify-center px-24 my-12">
-      <div class="my-auto mr-32 w-1/2">
+      <div class="my-auto mr-32 w-full sm:w-1/2">
         <h1 class="font-bold text-4xl">Συμπεράς Παύλος & Σια Ε.Ε.</h1>
         <p class="text-xl mb-2">Ασφαλιστικοί & Επενδυτικοί Σύμβουλοι</p>
         <p class="text-lg text-gray-600">Πιστοποιημένος financial planner.</p>
       </div>
-      <div class="w-1/3">
-        <img src="https://sosc.org.in/static/fa0eeca0e04ff3b58b9101710b38f409/32cb9/hero_main.png">
+      <div class="hidden sm:block sm:w-1/3">
+        <img :src="hero_main">
       </div>
     </div>
 
     <div class="flex flex-grow justify-center px-24 my-16">
       <div class="w-1/2 mr-32">
-        <img src="https://sosc.org.in/static/d20cbab6a5be9006b8efabd1f3906b08/32cb9/hero_clubs.png">
+        <img :src="hero_clubs">
       </div>
       <div class="my-auto w-2/3">
         <h2 class="font-bold text-2xl mb-2">Ασφάλιση</h2>
@@ -29,11 +29,11 @@
         <p class="text-lg">Η διαχείρηση των κεφαλαίων είναι πολύ δύσκολο γίνει, εάν δεν έχεις ευρύτατη γνώση της αγοράς, των επιλογών που υπάρχουν ανά πάσα στιγμή διαθέσιμες, αλλά και το προσωπικό επενδυτικό προφίλ του υποψήφιου, ώστε το τελικό αποτέλεσμα να σε δικαιώσει. Εμείς με τη εμπειρία και την εξιδείκευση σε αυτό τον τομέα, μπορούμε να διασφαλίσουμε ανάλογα αποτελέσματα.</p>
       </div>
       <div class="w-1/2">
-        <img src="https://sosc.org.in/static/e93d231e87ee71e5afede25aac4bcc3f/32cb9/hero_github.png">
+        <img :src="hero_github">
       </div>
     </div><div class="flex flex-grow justify-center px-24 my-16">
       <div class="w-1/2 mr-32">
-        <img src="https://sosc.org.in/static/d20cbab6a5be9006b8efabd1f3906b08/32cb9/hero_clubs.png">
+        <img :src="hero_clubs">
       </div>
       <div class="my-auto w-2/3">
         <h2 class="font-bold text-2xl mb-2">Financial planning</h2>
@@ -49,14 +49,25 @@
         <p class="text-lg">Ο χώρος των χρηματοασφαλιστικών υπηρεσιών έχει πολύ μεγάλο ενδιαφέρον και πολλές προοπτικές για το μέλλον. Η ενασχόληση με αυτό το επάγγελμα αποφέρει ικανοποιητικά εισοδήματα, αλλά και ηθική ικανοποίηση για τις υπηρεσίες που μπορεί να προσφέρει ένας σύμβουλος στους πελάτες του και την κοινωνία συνολικά. Αν πραγματικά σας ενδιαφέρει μια τέτοια καριέρα με κίνητρα και προοπτικές, μπορείτε να επικοινωνήσετε μαζί μας για περισσότερες πληροφορίες και για να δημιουργήσουμε μαζί τα όνειρά σας.</p>
       </div>
       <div class="w-1/2">
-        <img src="https://sosc.org.in/static/e93d231e87ee71e5afede25aac4bcc3f/32cb9/hero_github.png">
+        <img :src="hero_github">
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import hero_main from '@/assets/images/hero_main.png'
+import hero_github from '@/assets/images/hero_github.png'
+import hero_clubs from '@/assets/images/hero_clubs.png'
+
 export default {
   name: 'Intro',
+  data: function () {
+    return {
+      hero_main: hero_main,
+      hero_github: hero_github,
+      hero_clubs: hero_clubs
+    }
+  }
 }
 </script>
